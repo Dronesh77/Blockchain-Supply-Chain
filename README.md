@@ -36,7 +36,7 @@ Detailed dbdiagram can be found here: https://dbdiagram.io/d/supply-chain-65e99a
 
 1. Clone this repository
    ```bash
-   git clone https://github.com/proffapt/scmb
+   git clone https://github.com/Dronesh77/Blockchain-Supply-Chain.git
    cd scmb/
    ```
 2. Install `docker` and `docker-compose`
@@ -71,12 +71,12 @@ The documentation will have `{ip/domain}` referring to the **IP Address/Domain N
 - Send a _post_ request on the endpoint (`/signup`) with following JSON (`application/json`) data in request body:
   ```json
   {
-    "username": "proffapt",
-    "email": "proffapt@gmail.com",
-    "password": "proffapt@scmb",
-    "first_name": "Arpit",
-    "last_name": "Bhardwaj",
-    "address": "F-211 JCB Hall",
+    "username": "dronesh",
+    "email": "dmm12042002@gmail.com",
+    "password": "Mark77@scm",
+    "first_name": "Dronesh",
+    "last_name": "Magare",
+    "address": "SDS-326",
     "phone": "1234567890",
     "organisation": "IS LAB"
   }
@@ -86,12 +86,12 @@ The documentation will have `{ip/domain}` referring to the **IP Address/Domain N
   curl -X POST \
     -H "Content-Type: application/json" \
     -d '{
-          "username": "proffapt",
-          "email": "proffapt@gmail.com",
-          "password": "proffapt@scmb",
-          "first_name": "Arpit",
-          "last_name": "Bhardwaj",
-          "address": "F-211 JCB Hall",
+          "username": "Dronesh",
+          "email": "dmm1242002@gmail.com",
+          "password": "Mark77@scm",
+          "first_name": "Dronesh",
+          "last_name": "Magare",
+          "address": "SDS-326",
           "phone": "1234567890",
           "organisation": "IS LAB"
         }' \
@@ -104,8 +104,8 @@ The documentation will have `{ip/domain}` referring to the **IP Address/Domain N
 - Send a _post_ request on the endpoint (`/login`) with following JSON (`application/json`) data in request body:
   ```json
   {
-    "username": "proffapt",
-    "password": "proffapt@scmb"
+    "username": "Dronesh",
+    "password": "Mark77@scm"
   }
   ```
 - cURL example:
@@ -113,8 +113,8 @@ The documentation will have `{ip/domain}` referring to the **IP Address/Domain N
   curl -sS -X POST \
     -H "Content-Type: application/json" \
     -d '{
-            "username": "proffapt",
-            "password": "proffapt@scmb"
+            "username": "Dronesh",
+            "password": "Mark77@scm"
         }' \
     http://{ip/domain}/login
   ```
@@ -624,7 +624,7 @@ All the endpoints concerning person lie under `http://{ip/domain}/person/`.
   ```bash
   curl -sS -X GET \
     -H "Authorization: Bearer <auth-token>" \
-    "http://{ip/domain}/person/proffapt"
+    "http://{ip/domain}/person/Dronesh"
   ```
 
 ##### All
@@ -644,7 +644,7 @@ All the endpoints concerning person lie under `http://{ip/domain}/person/`.
   ```bash
   curl -sS -X DELETE \
     -H "Authorization: Bearer <auth-token>" \
-    "http://{ip/domain}/person/proffapt"
+    "http://{ip/domain}/person/Dronesh"
   ```
 
 #### PUT
@@ -655,12 +655,12 @@ All the endpoints concerning person lie under `http://{ip/domain}/person/`.
 - Send a _put_ request on the endpoint (`/person/`) with following JSON (`application/json`) data along with `Authorization: Bearer <auth-token>` header in request body:
   ```json
   {
-    "username": "proffapt",
-    "email": "proffapt@gmail.com",
-    "password": "proffapt@scmb",
-    "first_name": "Arpit",
-    "last_name": "Bhardwaj",
-    "address": "F-211 JCB Hall",
+    "username": "Dronesh",
+    "email": "Dronesh@gmail.com",
+    "password": "Mark77@scm",
+    "first_name": "Dronesh",
+    "last_name": "Magare",
+    "address": "SDS-326",
     "phone": "1234567890",
     "organisation": "IS LAB"
   }
@@ -671,12 +671,12 @@ All the endpoints concerning person lie under `http://{ip/domain}/person/`.
     -H "Content-Type: application/json" \
     -H "Authorization: Bearer <auth-token>" \
     -d '{
-          "username": "proffapt",
-          "email": "proffapt@gmail.com",
-          "password": "proffapt@scmb",
-          "first_name": "Arpit",
-          "last_name": "Bhardwaj",
-          "address": "F-211 JCB Hall",
+          "username": "Dronesh",
+          "email": "Dronesh@gmail.com",
+          "password": "Mark77@scm",
+          "first_name": "Dronesh",
+          "last_name": "Magare",
+          "address": "SDS-326",
           "phone": "1234567890",
           "organisation": "IS LAB"
         }' \
@@ -726,7 +726,7 @@ All the endpoints concerning shipment certificates lie under `http://{ip/domain}
   ```bash
   curl -sS -X GET \
     -H "Authorization: Bearer <auth-token>" \
-    "http://{ip/domain}/certificate/issuer/proffapt"
+    "http://{ip/domain}/certificate/issuer/Dronesh"
   ```
 
 ##### Download
@@ -756,7 +756,7 @@ All the endpoints concerning shipment certificates lie under `http://{ip/domain}
     "pdf_file=@test.pdf"
     "pdf_name=test.pdf"
     "shipment=S1"
-    "issuer=proffapt"
+    "issuer=Dronesh"
   ```
 - cURL example (`POST` - for `PUT` replace _POST_ with _PUT_ in the command):
   ```bash
@@ -766,6 +766,6 @@ All the endpoints concerning shipment certificates lie under `http://{ip/domain}
     -F "pdf_file=@test.pdf" \
     -F "pdf_name=test.pdf" \
     -F "shipment=S1" \
-    -F "issuer=proffapt" \
+    -F "issuer=Dronesh" \
     http://{ip/domain}/certificate
   ```
