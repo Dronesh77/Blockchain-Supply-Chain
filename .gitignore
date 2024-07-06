@@ -1,0 +1,11 @@
+# Environment Trash
+.DS_Store
+.vscode/
+
+# Python Trash
+__pycache__/
+myenv/
+
+.env
+*.pdf
+certificates/
